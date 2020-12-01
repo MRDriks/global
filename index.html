@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Global</title>
+</head>
+<body>
+  <div class="outer-wrapper">
+    <nav class="nav-bar">
+      <ul class="menu">
+        <li>
+          <a href="#" class="nav-link" onclick="navLinkClickHandler('home')">Home</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link" onclick="navLinkClickHandler('works')">Works</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link" onclick="navLinkClickHandler('about')">About</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link" onclick="navLinkClickHandler('contact')">Contact</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link" onclick="navLinkClickHandler('hire')">Hire us</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="device-message">
+      <div class="brand">
+        <img src="./assets/img/logo.png" class="brand-logo" alt="Brand logo">
+        <span class="brand-name">Global</span>
+      </div>
+      <p class="message">
+        Global has so much to offer that we must request you 
+        find a larger screen. You won't be disappointed.
+      </p>
+    </div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="brand">
+          <img src="./assets/img/logo.png" class="brand-logo" alt="Brand logo">
+          <span class="brand-name">Global</span>
+        </div>
+        <div class="menu-burger">
+          <span class="menu-line"></span>
+        </div>
+      </header>
+      <div class="inner-wrapper">
+        <aside class="side-bar">
+          <div class="nav-line">
+            <div class="point active" point-type="home">
+              <span class="point-number">01</span>
+              <a href="#" class="point-name" id="home" onclick="pointClickHandler('home')">Home</a>
+            </div>
+            <div class="point" point-type="works">
+              <span class="point-number">02</span>
+              <a href="#" class="point-name" id="works" onclick="pointClickHandler('works')">Works</a>
+            </div>
+            <div class="point" point-type="about">
+              <span class="point-number">03</span>
+              <a href="#" class="point-name" id="about" onclick="pointClickHandler('about')">About</a>
+            </div>
+            <div class="point" point-type="contact">
+              <span class="point-number">04</span>
+              <a href="#" class="point-name" id="contact" onclick="pointClickHandler('contact')">Contact</a>
+            </div>
+            <div class="point" point-type="hire">
+              <span class="point-number">05</span>
+              <a href="#" class="point-name" id="hire" onclick="pointClickHandler('hire')">Hire us</a>
+            </div>
+          </div>
+        </aside>
+        <main class="main" current-slide="home">
+          <section class="slide-home">  
+            <div class="content">
+              <div class="text-content">
+                <h1 class="title">Your next interactive experience</h1>
+                <a href="#" class="btn-hire">
+                  <span class="btn-hire-text">
+                    Hire us
+                    <img src="./assets/img/arrow-right.png" class="arrow-right" alt="Arrow">
+                  </span>
+                </a>
+              </div>
+              <img src="./assets/img/introduction-visual.png" class="intro-img" alt="Spaceman">
+            </div>
+            <p class="copy">
+              Design created by 
+              <a class="author-link" target="_blank" href="https://dribbble.com/sergeymelnik">Sergey Melnik</a>
+            </p>
+            <p class="copy">
+              Coded by 
+              <a class="author-link" target="_blank" href="https://github.com/MRDriks">Vadim Gorai</a>
+            </p>
+          </section>
+          <section class="slide-works">
+            <h2 class="title">Selected work</h2>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="work-card">
+                    <div class="image-shape author-novak"></div>
+                    <div class="text-content">
+                      <h3 class="author-name">Metiew & Smith</h3>
+                      <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="work-card">
+                    <div class="image-shape author-smith"></div>
+                    <div class="text-content">
+                      <h3 class="author-name">Metiew & Smith</h3>
+                      <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="work-card">
+                    <div class="image-shape author-victory"></div>
+                    <div class="text-content">
+                      <h3 class="author-name">Metiew & Smith</h3>
+                      <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+          </div>
+          </section>
+          <section class="slide-about">
+            <div class="content">
+              <h2 class="title">
+                We <br>
+                believe in passionate people
+              </h2>
+              <a href="#" class="btn-career">
+                <span class="btn-career-text">
+                  Career
+                  <img src="./assets/img/arrow-right.png" class="arrow-right" alt="Arrow">
+                </span>
+              </a>
+              <div class="items">
+                <div class="item">
+                  <p class="item-text">Winners</p>
+                </div>
+                <div class="item">
+                  <p class="item-text">Philosophy</p>
+                </div>
+                <div class="item">
+                  <p class="item-text">History</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="slide-contact">
+            <div class="contact-card">
+              <h3 class="address">Pawia 5,31-154 Kraków, Polanrd</h3>
+              <a class="email" href="mailto:ouremail@gmail.com">ouremail@gmail.com</a>  
+              <a class="tel" href="tel:+48126287560">+48 12 628 75 60</a> 
+              <a href="#" class="behance-link link">
+                <img src="./assets/img/behance.png" alt="">
+              </a>
+              <a href="#" class="dribbble-link link">
+                <img src="./assets/img/dribbble.png" alt="">
+              </a>
+              <a href="#" class="contact-link link">Contact us</a> 
+            </div>
+          </section>
+          <section class="slide-hire">
+            <div class="content">
+              <h2 class="title">You want us to do</h2>
+              <form class="hire-form">
+                <div class="row">
+                  <div class="form-group">
+                    <input type="checkbox" id="app_design" />
+                    <label for="app_design" class="label">App Design</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="checkbox" id="graphic_design" />
+                    <label for="graphic_design" class="label">Graphic Design</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="checkbox" id="motion_design" />
+                    <label for="motion_design" class="label">Motion Design</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group">
+                    <input type="checkbox" id="ux_design" />
+                    <label for="ux_design" class="label">UX Design</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="checkbox" id="web_design" />
+                    <label for="web_design" class="label">Web Design</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group">
+                    <input type="checkbox" id="marketing" />
+                    <label for="marketing" class="label">Marketing</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <input type="text" placeholder="Name">
+                  <input type="email" placeholder="Email">
+                </div>
+                <div class="row">
+                  <button type="button" class="btn-send">Send request</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script>
+    new Swiper('.swiper-container', {
+    direction: 'horizontal',
+    slidesPerView: 3,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,744 @@
+/* General styles */
+
+.outer-wrapper {
+  background-color: #0c0c0c;
+  width: 100vw;
+  height: 100vh;
+  perspective: 800px;
+  font-family: "Montserrat",sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+.wrapper {
+  background-color: #0c0c0c;
+  width: 100vw;
+  height: 100vh;
+  transition: transform 1.5s ease;
+}
+
+.wrapper.menu-active {
+  transform: rotateY(25deg) translate3d(0px,0px,-1000px);
+  border: 20px solid #007aff;
+}
+
+.inner-wrapper {
+  display: flex;
+  height: 89%;
+}
+
+.transition-style {
+  transition-property: visibility, opacity;
+  transition-duration: 1s;
+}
+
+/* Swiper */
+
+.swiper-container {
+  width: 1000px;
+  height: 511px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* Nav-bar */
+
+.nav-bar {
+  position: absolute;
+  top: 100px;
+  left: 70%;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.nav-bar.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-bar .menu {
+  list-style: none;
+}
+
+.nav-bar .menu li {
+  margin: 30px 0;
+}
+
+.nav-link {
+  font-size: 55px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  transition: color 0.3s ease;
+  color: #fff;
+}
+
+.nav-link:hover {
+  color: #0f33ff;
+}
+
+/* Device message */
+
+.device-message { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0c0c0c;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+
+.message { 
+  width: 90%;
+  margin: 30px 0 0 0;
+  font-weight: 700;
+  text-align: center;
+  line-height: 25px;
+}
+
+/* Header */
+
+.header { 
+  background-color: #0c0c0c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.brand { 
+  display: flex;
+  align-items: center;
+}
+
+.brand-name { 
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-left: 10px;
+}
+
+.menu-burger { 
+  width: 25px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-line,
+.menu-burger::before,
+.menu-burger::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+}
+
+.menu-burger::before {
+  top: 0;
+}
+
+.menu-line { 
+  width: 15px;
+  top: 9px;
+  left: 5px;
+}
+
+.menu-burger::after {
+  bottom: 0;
+}
+
+/* Side-bar */
+
+.side-bar {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.side-bar .nav-line {
+  background-color: #1f1f1f;
+  width: 2px;
+  height: 500px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.side-bar .point {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+  left: -1px;
+}
+
+.side-bar .point.active {
+  background-color: #0f33ff;
+}
+
+.side-bar .point.active > .point-number,
+.side-bar .point.active > .point-name {
+  color: #fff;
+}
+ 
+.side-bar .point-number,
+.side-bar .point-name {
+  font-size: 14px;
+  color: #505050;
+  font-weight: 300;
+  position: relative;
+}
+
+.side-bar .point,
+.side-bar .point-name,
+.side-bar .point-number {
+  transition: color 0.5s ease;
+}
+
+.side-bar .point-number {
+  left: -30px;
+  top: -5px;
+}
+
+.side-bar .point-name {
+  left: 15px;
+  top: -19px;
+  transition: color 0.3s ease; 
+}
+
+.side-bar .point-name:hover {
+  color: rgb(155, 154, 154);
+}
+
+/* Main */
+
+.main {
+  width: 100%;
+  position: relative;
+}
+
+.main[current-slide="home"] > .slide-home,
+.main[current-slide="works"] > .slide-works,
+.main[current-slide="about"] > .slide-about,
+.main[current-slide="contact"] > .slide-contact,
+.main[current-slide="hire"] > .slide-hire {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 2s ease 1s;
+}
+
+/* Slide 1 */
+
+.slide-home { 
+  padding: 65px 0 0 12%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.slide-home .content {
+  display: flex;
+  justify-content: flex-start;
+  width: 914px;
+  border-bottom: 2px solid #141414;
+  position: relative;
+}
+
+.slide-home .content::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 6px;
+  background-color: #1336ff;
+  position: absolute;
+  left: 14px;
+  bottom: -6px;
+}
+
+.slide-home .text-content { 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 415px;
+}
+
+.slide-home .intro-img {
+  position: relative;
+}
+
+.slide-home .title {
+  font-size: 68px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.slide-home .btn-hire {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 8px 10px;
+  position: relative;
+  margin-top: 80px;
+}
+
+.slide-home .btn-hire-text {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+} 
+
+.slide-home .arrow-right {
+  margin-left: 15px;
+  transition: margin-left 0.2s ease;
+}
+
+.slide-home .btn-hire::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #0f33ff;
+  position: absolute;
+  top: 0;
+  left: 22px;
+  z-index: 1;
+  transition: left 0.3s ease;
+}
+
+.slide-home .btn-hire:hover::after  {
+  left: 0;
+}
+
+.slide-home .btn-hire:hover .arrow-right  {
+  margin-left: 10px;
+}
+
+.slide-home .copy {
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.slide-home .author-link {
+  color: #fff;
+  text-decoration: underline;
+} 
+
+/* Slide 2 */
+
+.slide-works {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.slide-works .title {
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.slide-works .image-shape {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  margin: 50px 0 30px;
+  background-position: top center;
+  background-size: cover;
+  transition: all 0.5s ease;
+}
+
+.slide-works .author-novak {
+  background-image: url(../assets/img/work-victory.jpg)
+}
+
+.slide-works .author-smith {
+  background-image: url(../assets/img/work-metiew-smith.jpg)
+}
+
+.slide-works .author-victory {
+  background-image: url(../assets/img/work-alex-nowak.jpg)
+}
+
+.swiper-slide-active + .swiper-slide-next .image-shape {
+  transform: translate3d(0, 0, 340px);
+  margin: 130px 0 60px;
+}
+
+.swiper-slide-active + .swiper-slide-next .description {
+  visibility: visible;
+}
+
+.slide-works .description,
+.slide-works .author-name { 
+  text-align: center;
+}
+
+.slide-works .author-name { 
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.slide-works .description { 
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  visibility: hidden;
+}
+
+.slide-works .work-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  perspective: 800px;
+}
+
+/* Slide 3 */
+
+.slide-about {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../assets/img/about-visual.png);
+  background-position: top right 200px;
+  background-repeat: no-repeat;
+  padding: 50px 0 0 12%;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.slide-about .content {
+  width: 570px;
+  position: relative;
+}
+
+.slide-about .content::before {
+  content: '';
+  display: block;
+  width: 31px;
+  height: 31px;
+  border-radius: 15px;
+  background-color: #0f33ff;
+  position: absolute;
+  top: 59px;
+  left: 284px;
+}
+
+.slide-about .content::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 260px;
+  left: 266px;
+  width: 9px;
+  height: 9px;
+  background-color: #0f33ff;
+}
+
+.slide-about .title {
+  font-size: 68px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.slide-about .btn-career {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 8px 10px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.slide-about .btn-career:hover {
+  color: #007aff;
+}
+
+.slide-about .btn-career:hover .arrow-right {
+  margin-left: 5px;
+}
+
+.slide-about .btn-career-text {
+  display: inline-flex;
+  align-items: center;
+  margin: 35px 0 40px;
+}
+
+.slide-about .arrow-right {
+  margin-left: 15px;
+  transition: margin-left 0.5s ease;
+}
+
+.slide-about .items {
+  display: flex;
+}
+
+.slide-about .items > .item:nth-child(1) {
+  background-image: url(../assets/img/about-winners.jpg);
+  background-position: top -45px center;
+}
+
+.slide-about .items > .item:nth-child(2) {
+  background-image: url(../assets/img/about-philosophy.jpg);
+  background-position: top -35px center;
+}
+
+.slide-about .items > .item:nth-child(3) {
+  background-image: url(../assets/img/about-history.jpg);
+  background-position: top -10px center;
+}
+
+.slide-about .item {
+  width: 170px;
+  height: 90px;
+  border: 10px solid #0f33ff;
+  margin-right: 30px;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.slide-about .item:hover {
+  box-shadow: inset 0 0 0 5px #0f33ff;
+}
+
+.slide-about .item-text {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  position: absolute;
+  bottom: -18px;
+  left: 5px;
+}
+
+/* Slide 4 */
+
+.slide-contact {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(../assets/img/contact-visual.png);
+  background-repeat: no-repeat;
+  background-position-y: top;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.slide-contact .contact-card {
+  background-color: #0b0b0b;
+  position: absolute;
+  top: 105px;
+  left: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 50px 10px;
+  box-shadow: 0 0 14.5px rgba(0,0,0,0.75);
+}
+
+.slide-contact .address,
+.slide-contact .email,
+.slide-contact .tel { 
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.slide-contact .link {
+  width: 132px;
+  height: 41px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-contact .behance-link { 
+  background-color: #1769ff;
+}
+
+.slide-contact .dribbble-link { 
+  background-color: #e94b89;
+}
+
+.slide-contact .contact-link { 
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 700;
+  background-color: #0f33ff;
+}
+
+.slide-contact .address,
+.slide-contact .email,
+.slide-contact .tel,
+.slide-contact .behance-link, 
+.slide-contact .link,
+.slide-contact .dribbble-link, 
+.slide-contact .contact-link {
+  margin-bottom: 25px;
+} 
+
+/* Slide 5 */
+
+.slide-hire { 
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.slide-hire .content { 
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide-hire .title { 
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+.slide-hire .hire-form > .row:nth-child(1) { 
+  margin-top: 65px;
+}
+
+.slide-hire .hire-form > .row:nth-child(2) { 
+  margin: 65px 0;
+}
+
+.slide-hire .hire-form > .row:nth-child(3) { 
+  margin-bottom: 65px;
+}
+
+.slide-hire input[type="checkbox"] {
+  display: none;
+}
+
+.slide-hire input[type="checkbox"]:checked + .label {
+  background-color: #0f33ff;
+  border: 2px solid #0f33ff;
+}
+
+.slide-hire .label { 
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 15px 30px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: 0.5s ease;
+  transition-property: border, background-color;
+  margin: 0 15px;
+}
+
+.slide-hire .row { 
+  display: flex;
+  justify-content: center;
+}
+
+input[type="text"],
+input[type="email"] {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #fff;
+  font-weight: 300;
+  width: 315px;
+  border-bottom: 1px solid #fff;
+  padding: 15px 0;
+  margin: 0 10px;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+  color: #fff;
+} 
+
+.slide-hire .btn-send { 
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 14px 120px;
+  background-color: #0f33ff;
+  outline: none;
+  border: 2px solid #0f33ff;
+  margin-top: 65px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slide-hire .btn-send:hover {
+  background-color: transparent; 
+}
+
+/* Media querys */
+
+@media (max-width: 1170px) {
+  .side-bar {
+    display: none;
+  }
+
+  .slide-contact .contact-card {
+    left: 10%;
+  }
+
+  .slide-home {
+    padding-left: 5%;
+  }
+}
+
+@media (max-width: 1040px) {
+  .device-message {
+    display: flex;
+  }
+}
+
+@media (max-height: 610px) {
+  .device-message {
+    display: flex;
+  }
+}
