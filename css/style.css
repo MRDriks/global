@@ -14,12 +14,13 @@
   background-color: #0c0c0c;
   width: 100vw;
   height: 100vh;
-  transition: transform 1.5s ease;
+  transition: 1.5s ease;
+  transition-property: transform, box-shadow;
 }
 
 .wrapper.menu-active {
   transform: rotateY(15deg) translate3d(-150px,0px,-600px);
-  border: 20px solid #007aff;
+  box-shadow: 0 0 0 15px #007aff;
 }
 
 .inner-wrapper {
